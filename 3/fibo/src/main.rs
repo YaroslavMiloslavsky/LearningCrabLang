@@ -1,4 +1,5 @@
-use std::{io, u128};
+#![warn(clippy::all, clippy::pedantic)]
+use std::io;
 
 fn main() {
     println!("Welcome to the fibonacci function!");
@@ -17,7 +18,6 @@ fn main() {
                     println!(
                         "Could not parse the input, please provide a valid non negative value: {e}"
                     );
-                    continue 'prompt_user;
                 }
             }
         };
@@ -30,8 +30,9 @@ fn main() {
         for number in fib {
             print!("{number} ");
         }
+        println!();
 
-        'replay_loop: loop {
+        loop {
             println!("Do you wish to try again? Y(es)/N(o)");
             user_input_string.clear();
             io::stdin()
@@ -44,13 +45,11 @@ fn main() {
             }
             if user_input_string == "n" || user_input_string == "no" {
                 break 'game_loop;
-            } else {
-                println!("Please provide a valid answer only");
-                continue 'replay_loop;
             }
+            println!("Please provide a valid answer only");
         }
     }
-    println!("Goodbye!")
+    println!("Goodbye!");
 }
 
 fn generate_fibonacci(n: u32) -> Vec<u128> {
@@ -63,12 +62,11 @@ fn generate_fibonacci(n: u32) -> Vec<u128> {
             'fib_loop: for i in 2..(n as usize) {
                 let first = fib_vec[i - 1];
                 let second = fib_vec[i - 2];
-                let sum: u128 = match first.checked_add(second) {
-                    Some(num) => num,
-                    None => {
-                        println!("Adding {first} and {second} would cause an overflow");
-                        break 'fib_loop;
-                    }
+                let sum: u128 = if let Some(num) = first.checked_add(second) {
+                    num
+                } else {
+                    println!("Adding {first} and {second} would cause an overflow");
+                    break 'fib_loop;
                 };
                 fib_vec.push(sum);
             }
