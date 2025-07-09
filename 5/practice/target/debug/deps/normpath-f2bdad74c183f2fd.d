@@ -1,0 +1,11 @@
+C:\Users\Yaros\Desktop\DSA\rust\5\practice\target\debug\deps\normpath-f2bdad74c183f2fd.d: C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\lib.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\base.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\cmp.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\error.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\windows\mod.rs
+
+C:\Users\Yaros\Desktop\DSA\rust\5\practice\target\debug\deps\libnormpath-f2bdad74c183f2fd.rlib: C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\lib.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\base.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\cmp.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\error.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\windows\mod.rs
+
+C:\Users\Yaros\Desktop\DSA\rust\5\practice\target\debug\deps\libnormpath-f2bdad74c183f2fd.rmeta: C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\lib.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\base.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\cmp.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\error.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\windows\mod.rs
+
+C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\lib.rs:
+C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\base.rs:
+C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\cmp.rs:
+C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\error.rs:
+C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\normpath-1.3.0\src\windows\mod.rs:

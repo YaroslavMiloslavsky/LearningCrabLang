@@ -1,0 +1,10 @@
+C:\Users\Yaros\Desktop\DSA\rust\5\practice\target\debug\deps\range_collections-d7029956fbb510b0.d: C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\lib.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\merge_state.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\iterators.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\range_set.rs
+
+C:\Users\Yaros\Desktop\DSA\rust\5\practice\target\debug\deps\librange_collections-d7029956fbb510b0.rlib: C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\lib.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\merge_state.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\iterators.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\range_set.rs
+
+C:\Users\Yaros\Desktop\DSA\rust\5\practice\target\debug\deps\librange_collections-d7029956fbb510b0.rmeta: C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\lib.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\merge_state.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\iterators.rs C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\range_set.rs
+
+C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\lib.rs:
+C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\merge_state.rs:
+C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\iterators.rs:
+C:\Users\Yaros\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\range-collections-0.2.4\src\range_set.rs:
