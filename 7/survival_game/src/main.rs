@@ -38,7 +38,7 @@ fn main() {
 
     let wooden_axe_recipe = CraftingRecipe::new(
         String::from("wooden axe"),
-        Item::new(String::from("wooden axe"), ItemType::Tool(ToolType::Axe)),
+        Item::new("wooden axe".to_string(), ItemType::Tool(ToolType::Axe)),
         wooden_axe_inputs,
     );
     let work_bench = CraftingBench::new(vec![wooden_axe_recipe]);
