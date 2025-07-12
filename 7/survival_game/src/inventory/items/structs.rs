@@ -4,7 +4,7 @@ use crate::inventory::items::enums::MaterialType;
 use crate::inventory::items::enums::ToolType;
 use crate::inventory::items::enums::WeaponType;
 
-#[derive(Debug, PartialEq, Eq, Hash)]
+#[derive(Debug, PartialEq, Eq, Hash, Clone)]
 pub struct Item {
     pub name: String,
     pub category: ItemType,

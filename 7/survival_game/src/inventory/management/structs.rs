@@ -19,12 +19,12 @@ impl Inventory {
 }
 
 impl Inventory {
-    fn current_weight(&self) -> u32 {
+    // I would instead keep a variable to calculate weight each time.
+    pub fn current_weight(&self) -> u32 {
         let mut current_weight: u32 = 0;
         for item in &self.items {
             current_weight += item.weight;
         }
-
         current_weight
     }
 
@@ -45,7 +45,9 @@ impl Inventory {
     }
 
     pub fn add_item(&mut self, item: Item) -> Result<(), String> {
-        let capacity_left = self.max_capacity - self.current_weight();
+        let capacity_left = self
+            .max_capacity
+            .saturating_sub(self.current_weight() + item.weight);
         if capacity_left > 0 {
             self.add_name_index_map(self.items.len(), String::from(&item.name));
             self.items.push(item);
@@ -75,6 +77,16 @@ impl Inventory {
     }
 
     pub fn list_items(&self) {
+        println!("\nInventory:");
+        println!(
+            "Current weight: {}\\{}",
+            self.current_weight(),
+            self.max_capacity
+        );
+        println!(
+            "{} weight units left",
+            self.max_capacity - self.current_weight()
+        );
         for item in &self.items {
             println!(
                 "Item: {} is a {:?} with weight of {}",
