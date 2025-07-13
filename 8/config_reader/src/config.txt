@@ -1,0 +1,6 @@
+timeout_seconds=30
+max_retries=5
+log_level=INFO
+invalid_setting=abc
+port=eighty
+another_setting=10
