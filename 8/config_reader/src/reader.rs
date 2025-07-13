@@ -1,6 +1,6 @@
 use crate::{config::Config, custom_error::ConfigError};
 
-use std::{fs, io::ErrorKind};
+use std::{collections::HashMap, fs, io::{BufRead, BufReader, ErrorKind}};
 
 #[allow(unused)]
 pub struct ConfigReader {
@@ -8,10 +8,31 @@ pub struct ConfigReader {
 }
 
 impl ConfigReader {
-    pub fn real_config_values(&self) {
-        let buffer = fs::read_to_string(self.config.get_config_path())
-            .unwrap_or_else(|e| panic!("Could not read values from config: {e}"));
-        println!("{buffer}");
+
+    const MAX_VALUES: usize = 256;
+
+    // Altered the function a bit
+    pub fn load_config(&self) -> Result<HashMap<String, String>, ConfigError> {
+        let file = match fs::File::open(self.config.get_config_path()) {
+            Ok(val) => val,
+            Err(e) => return Err(ConfigError::Io(std::io::Error::new(ErrorKind::NotFound, e))),
+        };
+
+        let buffer_reader = BufReader::new(file);
+        let values_map: HashMap<String, String> = HashMap::with_capacity(Self::MAX_VALUES);
+
+        for line_result in buffer_reader.lines() {
+            match line_result {
+                Ok(val) => {
+                    let line_ref = & val;
+                    if is_valid_value...
+                },
+                Err(e) => return Err(ConfigError::Io(std::io::Error::new(ErrorKind::InvalidData, e))),
+            }
+        }
+    
+
+        Ok(HashMap::new())
     }
 }
 
