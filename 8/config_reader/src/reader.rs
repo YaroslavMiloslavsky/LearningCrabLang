@@ -13,9 +13,20 @@ pub struct ConfigReader {
 }
 
 impl ConfigReader {
-    // pub fn get_setting_as_u32(&self, key: &str) -> Result<u32, ConfigError> {
+    const MAX_INT_VALUE: u32 = 100;
+    pub fn get_setting_as_u32(&self, key: &str) -> Result<u32, ConfigError> {
+        let Some(value) = self.values.get(key) else {
+            return Err(ConfigError::MissingSetting(key.to_string()));
+        };
 
-    // }
+        let value: u32 = match value.trim().parse() {
+            Ok(num) if num > Self::MAX_INT_VALUE => Self::MAX_INT_VALUE,
+            Ok(num) => num,
+            Err(_) => return Err(ConfigError::InvalidValue(key.to_string(), value.to_string())),
+        };
+    
+        Ok(value)
+    }
 
     // Altered the function a bit
     pub fn load_config(&mut self) -> Result<&HashMap<String, String>, ConfigError> {
@@ -68,6 +79,7 @@ impl ConfigReader {
 
         match values.len() {
             2 => {
+                // To put it into a helper method, lifetimes needed :(
                 let Some(value) = values.pop() else {
                     return Err(ConfigError::InvalidValue(
                         val.to_string(),

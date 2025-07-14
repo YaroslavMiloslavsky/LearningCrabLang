@@ -14,3 +14,9 @@ impl From<std::io::Error> for ConfigError {
         ConfigError::Io(value)
     }
 }
+
+impl From<std::num::ParseIntError> for ConfigError {
+    fn from(value: std::num::ParseIntError) -> Self {
+        ConfigError::ParseIntError(value)
+    }
+}
