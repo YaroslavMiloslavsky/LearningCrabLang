@@ -4,3 +4,4 @@ log_level=INFO
 invalid_setting=abc
 port=eighty
 another_setting=10
+another_setting_1=10

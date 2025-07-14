@@ -7,3 +7,10 @@ pub enum ConfigError {
     InvalidValue(String, String),
     MissingSetting(String),
 }
+
+// From the brief example in chapter 9
+impl From<std::io::Error> for ConfigError {
+    fn from(value: std::io::Error) -> Self {
+        ConfigError::Io(value)
+    }
+}
