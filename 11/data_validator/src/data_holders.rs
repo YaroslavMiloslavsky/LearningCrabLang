@@ -1,7 +1,7 @@
 use std::fmt::Debug;
 
 #[derive(Debug, PartialEq)]
-pub struct ValidatedDate<'a, T>
+pub struct ValidatedData<'a, T>
 where
     T: Debug,
 {
