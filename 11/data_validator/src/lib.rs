@@ -1,7 +1,13 @@
 #![warn(clippy::all, clippy::pedantic)]
+#![allow(unused)]
 
-mod data_holders;
+mod data_holder;
 mod errors;
-mod min_validator;
-mod sanitization_rules;
-mod validation_rules;
+mod processor;
+mod rules;
+mod sanitizer;
+mod validator;
+
+pub use processor::DataProcessor;
+pub use validator::{email_validator::EmailFormatValidator, min_validator::MinLengthValidator, positive_number_validator::PositiveNumberValidator};
+pub use sanitizer::{to_lower_case_sanitizer::ToLowerCaseSanitizer, white_space_sanitizer::TrimWhitespaceSanitizer};
